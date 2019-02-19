@@ -1,0 +1,28 @@
+@mixin respond($breakpoint) 
+    @if $breakpoint == min
+      @media (max-width: 28.125em)  
+        @content   //450px
+
+    @if $breakpoint == smallmin
+      @media (min-width: 48em)  
+        @content   //768px
+    
+    @if $breakpoint == smallmax
+      @media (max-width: 48em)  
+        @content   //768px
+
+    @if $breakpoint == mediummin
+      @media (min-width: 62em)  
+        @content   //992px
+
+    @if $breakpoint == mediummax
+      @media (max-width: 62em)  
+        @content   //992px
+
+    @if $breakpoint == bigmin
+      @media (min-width: 69em)  
+        @content   //1104px
+ 
+    @if $breakpoint == bigmax
+      @media (max-width: 69em)  
+        @content   //1104px

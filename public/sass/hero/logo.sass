@@ -1,0 +1,24 @@
+// This is the logo component
+.hero__logoBox 
+  width: 290px
+  height: 80px
+  background-color: #E4E4E5
+  position: relative
+
+  @include respond(bigmax)
+    width: 250px
+    height: 70px
+
+  @include respond(smallmax)
+    width: 100%
+    height: inherit
+
+.logo 
+  max-width: 260px
+  max-height: 56px
+  height: 90%
+  width: 90%
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)

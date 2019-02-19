@@ -1,0 +1,191 @@
+$boxWidth: 405px
+$boxWidthSmall: 350px
+$boxWidthMin: 90%
+.hero__package
+  // Package Title Box
+  &Info 
+    width: $boxWidth
+    height: inherit
+    background-color: #30353B
+    position: relative
+
+    display: flex
+    align-items: center
+
+    @include respond(bigmax)
+      width: $boxWidthSmall
+
+    @include respond(smallmax)
+      width: 100%
+      padding: 0
+
+  &Adv 
+    width: $boxWidth
+    height: 100%
+    background-color: #F0F1F1
+
+    @include respond(bigmax)
+      width: $boxWidthSmall
+
+    @include respond(smallmax)
+      width: 100%
+      background-color: #F2F2F2      
+
+  &AdvBox--1 
+    height: 45%
+    position: relative
+
+    display: flex
+    justify-content: center
+    flex-direction: column
+
+    &::after 
+      content: ''
+      width: 92%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      left: 50%
+      transform: translateX(-50%)
+      border-bottom: 2px solid #E4E5E5
+
+  &AdvCheck 
+    display: flex
+    margin: 1% 0
+
+    @include respond(bigmax)
+      font-size: 19px
+
+  // Price box
+  &AdvBox--2
+    height: 55%
+    position: relative
+
+    display: flex
+    flex-direction: row
+    justify-content: center
+
+  &AdvCheckGreen
+    width: 30%
+    height: 100%
+
+    display: flex
+    align-items: center
+    justify-content: flex-end
+
+  &AdvPrice 
+    width: 70%
+    height: 100%
+    padding-left: 3.5%
+    padding-bottom: 1%
+
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+  &Attention 
+    width: $boxWidth
+    height: 100%
+    background-color: #FF7607
+    transition: ease-in-out .2s .1s
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    &:hover > .hero__packageTitle
+      transform: scale(1.05)
+
+    @include respond(bigmax)
+      width: $boxWidthSmall
+
+    @include respond(smallmax)
+      width: 100%
+
+  &Title 
+    font-size: 21px
+    color: #E4E5E5
+    font-weight: 300
+    transition: ease-in-out .2s .1s
+
+    @include respond(bigmax)
+      font-size: 20px
+
+    @include respond(min)
+      font-size: 19px
+
+  &Paragraph 
+    font-size: 14px
+    color: #535C65
+    font-weight: 400
+
+    @include respond(bigmax)
+      font-size: 13px
+
+    @include respond(smallmax)
+      display: inline-block
+
+.arrow 
+  width: 13px
+  height: 13px
+  fill: #535C65
+  margin-right: 1.5%
+
+
+.arrowCircle 
+  width: 57px
+  height: 57px
+
+  @include respond(bigmax)
+    width: 50px
+    height: 50px
+
+.price
+  &--actual 
+    font-size: 42px
+    font-weight: 400
+    color: #535C65
+
+    @include respond(bigmax)
+      font-size: 35px
+
+  &--before
+    font-size: 16px
+    font-weight: 400
+    color: #535C65
+    text-decoration: line-through
+
+    @include respond(bigmax)
+      font-size: 15px
+
+// Useful for mobile alignment
+.hero--center
+  width: $boxWidth
+  padding-left: 6%
+
+  @include respond(bigmax)
+    width: $boxWidthSmall
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+
+  @include respond(smallmax)
+    padding: 0
+
+  @include respond(min)
+    width: $boxWidthMin
+
+  &Price
+    width: $boxWidth
+    display: flex
+
+    @include respond(bigmax)
+      width: $boxWidthSmall
+
+.hide
+  opacity: 0
+  visibility: hidden
+
+.hideSmall
+  height: 0

@@ -1,0 +1,66 @@
+// Some html and body preparations
+*,
+*::after,
+*::before 
+  margin: 0
+  padding: 0
+  box-sizing: inherit
+
+body 
+  box-sizing: border-box
+  overflow-x: hidden
+  background-color: #30353B
+  font-family: "Fira Sans" 
+
+/* Little things || Components */
+.pointer 
+  cursor: pointer
+
+// This is the layout of the page
+.hero 
+  width: 100%
+  height: 960px
+  max-width: 1104px
+  margin: 0 auto
+
+  @include respond(small)
+    height: auto
+
+  &__image 
+    height: 100%
+    width: 100%
+    background-image: url('../img/mood.jpg')
+    background-size: cover
+    background-position: 75% bottom
+
+    @include respond(smallmax)
+      background-image: none
+
+.hero__SmallBox
+  width: 100%
+  max-height: 450px !important
+  
+  display: flex
+  justify-content: center
+  align-items: center
+
+.hero__SmallImage
+  width: 100%
+  height: 100%
+  
+.hero__footer
+  &Box
+    display: flex
+    align-items: center
+    justify-content: center
+
+    @include respond(smallmax)
+      align-items: flex-start
+
+  &Text
+    width: 80%
+    text-align: center
+    font-size: 16px
+    font-weight: 300
+    padding: 15px 0
+    color: #C5C5C5

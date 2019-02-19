@@ -1,0 +1,83 @@
+.hero__info
+  &Box
+    right: 0
+    width: 440px
+    height: 446px
+    background-color: rgba(240,241,241, .85)
+    padding: 0 7% 0 7%
+    opacity: 0
+    visibility: hidden
+    right: -72%
+    transition: ease-in-out .2s .1s
+    position: absolute
+
+    @include respond(bigmax)
+      width: 350px
+      height: 500px
+
+    @include respond(smallmax)
+      right: 0
+      opacity: 1
+      visibility: visible
+      width: 100%
+      height: auto
+      padding: 3% 7% 7% 7%
+      background-color: #FFFFFF
+      
+      
+    &Title 
+      width: 100%
+      height: 20%
+
+      display: flex
+      align-items: center
+      border-bottom: 1px solid #535C65
+
+      @include respond(bigmax)
+        height: 15%
+
+      @include respond(smallmax)
+        height: 75px
+
+    &Paragraph 
+      padding: 10% 0 5% 0
+
+      @include respond(bigmax)
+        padding: 5% 0
+
+    &Close
+      position: absolute
+      top: 2%
+      right: 2%
+
+  &Close 
+    fill: #6A7178
+    width: 20px
+    height: 20px
+
+    // @include respond(smallmax)
+    //   display: none
+
+  &Title 
+    font-size: 22px
+    font-weight: 300
+    color: #535C65
+
+    @include respond(bigmax)
+      font-size: 18px
+
+  &Paragraph 
+    font-size: 13px
+    color:#6A7178
+    line-height: 18px
+
+    @include respond(bigmax)
+      font-size: 12px
+
+.open 
+  opacity: 1
+  visibility: visible
+  right: 0
+
+.openSmall
+  height: 450px
